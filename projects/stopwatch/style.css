@@ -14,10 +14,14 @@ body {
 }
 
 .container {
-  width: 50%;
-  height: 150px;
+  width: 70%;
+  height: 200px;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 8px;
+}
+
+.container #timer {
+  font-size: clamp(2.5rem, 7vw, 10rem);
 }
 
 #timer {
@@ -54,4 +58,14 @@ button i {
 
 #reset {
   background-color: red;
+}
+
+@media (min-width: 768px) {
+  .container {
+    height: 50%;
+  }
+
+  button i {
+  font-size: 5vw;
+  padding: 6px;
 }

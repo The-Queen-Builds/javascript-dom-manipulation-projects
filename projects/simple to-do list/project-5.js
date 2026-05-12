@@ -10,6 +10,7 @@ inputTask.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
     e.preventDefault();
     addTask.click();
+    cancelText.style.display = "none";
   }
 });
 
@@ -58,7 +59,10 @@ function addNewTask() {
 inputTask.addEventListener("input", function () {
   this.style.height = "auto";
   this.style.height = this.scrollHeight + "px";
+  // but then the goal is to only show the cancelText button when there is text in the inputTask area.
+  // if (document.activeElement !== inputTask) {
   cancelText.style.display = this.value !== "" ? "block" : "none";
+  // }
 });
 
 cancelText.addEventListener("click", function () {

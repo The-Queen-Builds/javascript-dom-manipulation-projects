@@ -46,7 +46,7 @@ const quotes = [
     person: `Michael Altshuler`,
   },
   {
-    quote: ` "The love of beauty is taste, the creation of beauty is art`,
+    quote: ` "The love of beauty is taste, the creation of beauty is art"`,
     person: ` Ralph Waldo Emerson`,
   },
   {
@@ -66,7 +66,7 @@ const quotes = [
     person: `Zig Ziglar`,
   },
   {
-    quote: ` "To every thing there is a season, and a time to every purpose under the heaven`,
+    quote: ` "To every thing there is a season, and a time to every purpose under the heaven"`,
     person: ` The Holy Writ`,
   },
 ];

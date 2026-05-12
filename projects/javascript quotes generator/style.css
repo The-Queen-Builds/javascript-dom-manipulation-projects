@@ -17,7 +17,7 @@ body {
 
 .container {
   width: 550px;
-  height: 450px;
+  height: 90%;
   transition: 0.4s;
 }
 
@@ -35,7 +35,7 @@ body {
 .main-content {
   margin: 1rem;
   width: fit-content;
-  min-height: 300px;
+  min-height: 200px;
   background-color: rgba(255, 255, 255, 0.619);
   border-radius: 15px;
   padding: 50px 40px;

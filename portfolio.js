@@ -1,6 +1,6 @@
 //// THE PROJECT DATABASE ////
 
-//// An array of the objects, where each object is a project. ////
+//// An array of the objects, where each object is a project. //// so this could be called a Hardcoded js, or a NoAPI as we are relying on a local array.
 
 const projects = [
   {
@@ -9,7 +9,7 @@ const projects = [
     title: "Quotes Generator",
     description:
       "Random inspirational and life-changing quotes immersed in invigorating background images.",
-    tech: ["Javascript objects, events", "DOM"],
+    tech: ["NoAPI(Hardcoded quote dataset)", "DOM"],
     path: "projects/javascript quotes generator/index.html",
   },
   {
@@ -18,15 +18,16 @@ const projects = [
     title: "To-do list Manager",
     description:
       "Your cool task manager with pleasing buttons to add, delete and mark tasks as complete.",
-    tech: ["Javascript", "LocalStorage", "DOM"],
+    tech: ["Javascript events", "DOM"],
     path: "projects/simple to-do list/index.html",
   },
   {
     // third project
     id: 3,
     title: "Modal",
-    description: "Cool click to appear interface",
-    tech: ["Javascript", "DOM traversal"],
+    description:
+      "A modal that comes above all the content, closest to the user.",
+    tech: ["Modal logic", "DOM"],
     path: "projects/modal/index.html",
   },
   {
@@ -34,7 +35,7 @@ const projects = [
     id: 4,
     title: "FAQ-Accordion",
     description: "This string instrument's got questions and answers too!",
-    tech: ["Javascript events, CSS gradients"],
+    tech: ["Javascript events, CSS transitions"],
     path: "projects/faq-accordion/index.html",
   },
   {
@@ -42,13 +43,15 @@ const projects = [
     id: 5,
     title: "Your go-to stopwatch",
     description: "How about a run this morning? Timed!",
-    tech: ["Javascript conditional logic", "DOM"],
+    tech: ["Web API methods", "DOM"],
     path: "projects/stopwatch/index.html",
   },
 ];
 
-const projectsGrid = document.getElementById("projectsGrid");
+const projectsGrid = document.getElementById("projectsGrid"); // so we get the projectsGrid div, so we can modify it. Initially it has no content but of course, that is what the "innerHTML" will do.
 
+// So what "map" does is to convert an old list into a new list. And the list-items here are string. For this example, the new list items is this HTML text we are inputing into the projectsGrid container. And then where the word "map" is self-explanatory... ? It maps each object in that list; for example, for projects[1].path becomes project.path and this is done with respect to the index until it has exhausted all the list items.
+// Therefore, .join() turns all the list items to a single string.
 function renderProjects() {
   projectsGrid.innerHTML = projects
     .map(

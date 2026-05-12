@@ -50,12 +50,12 @@ function stopWatch() {
 
 startStopBtn.addEventListener("click", function () {
   if (timerStatus === "stopped") {
-    timerInterval = window.setInterval(stopWatch, 1000);
+    timerInterval = window.setInterval(stopWatch, 1000); // this initiates the callback function to start running according to N milliseconds.
     document.getElementById("startStopBtn").innerHTML =
       `<i class="fa-solid fa-pause" id="pause"></i>`;
     timerStatus = "started";
   } else {
-    window.clearInterval(timerInterval);
+    window.clearInterval(timerInterval); // stops callback from being called again; hence the timer stops counting.
     document.getElementById("startStopBtn").innerHTML =
       `<i class="fa-solid fa-play" id="play"></i>`;
     timerStatus = "stopped";
