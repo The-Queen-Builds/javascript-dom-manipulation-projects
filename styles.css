@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+  min-height: 100vh;
+  background: white;
+  overflow-x: hidden;
+  padding: 0.8rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.header h1 {
+  text-align: center;
+  padding: 10px;
+}
+
+.header p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.badges {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.badge {
+  margin-left: 8px;
+  display: inline-block;
+  font-size: 1.3rem;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Project Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 8px;
+  margin: 20px 20px 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 15px 3px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(10px);
+  box-shadow: 0 0 4px;
+}
+
+/* Project preview (iframe) */
+.project-preview {
+  height: 300px;
+  background: #f5f5f5;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-preview iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  pointer-events: none; /* to prevent interaction in preview mode */
+}
+
+.live-badge {
+  padding: 4px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #4caf50;
+  color: white;
+  border-radius: 5px;
+}
+
+.project-info {
+  padding: 20px;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.project-description {
+  color: #333;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  font-style: italic;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.tech-tag {
+  color: #555;
+  font-size: 0.8rem;
+}
+
+.project-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s; /* Animates everything about this button */
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: #556eea;
+  color: white;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.btn-primary:hover {
+  background-color: #5a67d8;
+  transform: scale(1.02);
+}
+
+.btn-secondary {
+  background-color: #48bb78;
+  color: white;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.btn-secondary:hover {
+  background-color: #38a169;
+}
+
+/* Modal for full project view */
+.modal {
+  display: none; /* of course, our modal is not seen initially, until the "launch" button is clicked*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+.modal-content {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  margin: 2% auto;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.modal-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.close-modal {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 2rem;
+  }
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+}

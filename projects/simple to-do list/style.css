@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body {
+  height: 100vh;
+  background: url(images/bgimg9.jpeg) no-repeat center center/ cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.add-task-container {
+  text-align: center;
+  width: 80%;
+  padding: 8px;
+  background-color: #fff;
+  border: 2px solid green;
+  box-shadow: 0 0 2px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+
+  display: flex;
+}
+
+textarea {
+  flex: 5;
+  margin-right: 8px;
+  border: none;
+  font-size: 1.2rem;
+  outline: none;
+  padding: 2px;
+  overflow-y: hidden;
+  transition: height 5s ease;
+}
+
+#input-area {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 5;
+  margin-right: 10px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  padding: 3px;
+  flex-wrap: wrap;
+}
+
+#cancelText {
+  display: none;
+}
+
+#add-task {
+  flex: 1;
+  transition: 0.3s;
+  font-size: 1.2rem;
+  padding: 3px;
+  color: green;
+  background-color: #fff;
+  border: 2px solid green;
+  border-radius: 8px;
+  box-shadow: 0 0 2px;
+}
+
+#add-task:hover {
+  background-color: green;
+  color: #fff;
+}
+
+#task-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  flex-wrap: wrap;
+}
+
+.task {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  align-items: center;
+  margin-bottom: 10px;
+  display: flex;
+  width: 100%;
+  border: 2px solid green;
+}
+
+.task button {
+  cursor: pointer;
+  margin: 7px;
+  width: 40px;
+  height: 30px;
+  border-radius: 5px;
+  transition: 0.3s;
+  flex-shrink: 0;
+}
+
+.task li {
+  border: 2px solid green;
+  border-radius: 5px;
+  padding: 7px;
+  box-shadow: 0 0 2px;
+  flex: 1;
+  margin-right: 20px;
+  list-style: none;
+  overflow-wrap: break-word;
+  min-width: 0;
+}
+
+.task .checkTask {
+  margin-right: 5px;
+  color: gold;
+  border: 2px solid gold;
+  background-color: #fff;
+}
+
+.task .checkTask:hover {
+  background-color: gold;
+  color: #fff;
+}
+
+.task .deleteTask {
+  color: red;
+  background-color: #fff;
+  border: 2px solid red;
+}
+
+.task .deleteTask:hover {
+  color: #fff;
+  background-color: red;
+}
+
+@media (min-width: 768px) {
+  .add-task-container {
+    width: 700px;
+  }
+
+  textarea {
+    font-size: 2rem;
+    padding: 5px;
+  }
+}
